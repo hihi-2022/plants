@@ -1,3 +1,4 @@
+const fs = require('fs').promises
 const express = require('express')
 const hbs = require('express-handlebars')
 const path = require('path')
@@ -13,8 +14,12 @@ server.set('view engine', 'hbs')
 server.use(express.static(path.join(__dirname, 'public')))
 server.use(express.urlencoded({ extended: true }))
 
-
 //routes
+server.use('/plants' , routes)
+
+
+
+
 
 //home path
 server.get('/', (req, res) => {
@@ -37,6 +42,7 @@ server.get('/plants/:id', (req, res) => {
 server.get('/key', (req, res) => {
   res.render('key')
 })
+
 
 
 module.exports = server
