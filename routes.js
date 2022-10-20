@@ -7,15 +7,14 @@ const router = express.Router()
 router.get('/plants/:id', (req, res) => {
   const id = Number(req.params.id)
   fs.readFile('./data.json', 'utf-8')
-    .then(data => {
+    .then((data) => {
       const parsedData = JSON.parse(data)
-      // const onePuppy = parsedData.puppies.find(puppy => puppy.id === id)
-      
-      return res.render('details', onePuppy)
+      const singlePlant = parsedData.plant.find((plant) => plant.id === id)
+      return res.render('plants', singlePlant)
     })
-    .catch(err => {
-    return res.status(400).send(err.message)
-  })
+    .catch((err) => {
+      return res.status(400).send(err.message)
+    })
 })
 
 router.post('/:id/edit', (req, res) => {
@@ -40,7 +39,7 @@ router.post('/:id/edit', (req, res) => {
     // return fs.writeFile('./data.json', JSON.stringify(animals, null, 4))
     // })
     // .then(() => { return res.redirect('/puppies/' + id) })
-    .catch(err => {
+    .catch((err) => {
       return res.status(400).send(err.message)
     })
 })
