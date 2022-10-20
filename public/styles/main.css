@@ -1,0 +1,35 @@
+/* @import url(https://fonts.google.com/specimen/Poppins); */
+
+
+
+body {
+  font-family: 'Poppins';
+  background-color: aquamarine;
+}
+
+
+nav{
+  justify-content: center;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 12px;
+  background-color: black;
+}
+
+a{
+  color: white;
+}
