@@ -30,7 +30,7 @@ server.get('/plants', (req, res) => {
 server.get('/plants/:id', (req, res) => {
   const id = (req.params.id - 1)
   const plantPath = plant[id]
-  res.render('plants/{{>plantIDtags}}')
+  res.render('plants' , plantPath)
 })
 
 //Key path
