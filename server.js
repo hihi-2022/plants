@@ -13,6 +13,8 @@ server.set('view engine', 'hbs')
 server.use(express.static(path.join(__dirname, 'public')))
 server.use(express.urlencoded({ extended: true }))
 
+
+//routes
 server.get('/', (req, res) => {
   res.render('home')
 })
