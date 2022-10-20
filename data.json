@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "scientific_name": "Dracaena trifasciata",
+      "common_name": "Snake plant",
+      "image": "public/images/snake_plant.jpeg",
+      "skill_level": "Beginner",
+      "water": "Needs very little water",
+      "sunlight": "Can tolerate any light",
+      "temperature_humidity": "Likes warm wather, high humidity",
+      "cost": "$$",
+      "care_instructions": "This plant is a great beginner plant that is nearly impossible to kill and looks great too! It purifies the air and needs very little water or even sunlight."
+    },
+    {
+      "id": 2,
+      "scientific_name": "Dionaea muscipula",
+      "common_name": "Venus flytrap",
+      "image": "public/images/venusflytrap.jpeg",
+      "skill_level": "Intermediate",
+      "water": "Needs a lot of water",
+      "sunlight": "Needs a lot of sunlight",
+      "temperature_humidity": "Likes warm weather, high humidity",
+      "cost": "$",
+      "care_instructions": "Venus flytraps are interesting carnivorous plants you can keep indoors to trap annoying flies that make their way into your home. These plants get their minerals, like nitrogen, from the insects they catch so need little to no soil or fertiliser. These plants are super thirsty though! It's easy to manage this by watering the plant from the bottom through a saucer."
+    },
+    {
+      "id": 3,
+      "scientific_name": "Paphiopedilum orchid",
+      "common_name": "Lady slipper orchid",
+      "image": "public/images/slipper_orchid.jpeg",
+      "skill_level": "Advanced",
+      "water": "Medium amount of water, less in the winter dormancy period",
+      "sunlight": "Medium amount of sunlight",
+      "temperature_humidity": "Likes humid, warm environments all year round",
+      "cost": "$$$",
+      "care_instructions": "The lady slipper orchid has beautiful flowers but can be hard work to get them to flower. The challenge is that these flowers need lots of specific fertiliser special to orchids. They also prefer lots of humidity and warmth. However, if you're able to put in the time and effort, you will be rewarded with an incredible flower."
+    }
+  ]
+}
