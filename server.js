@@ -1,8 +1,11 @@
 const express = require('express')
 const hbs = require('express-handlebars')
 const path = require('path')
+const routes = require('./routes')
 
 const server = express()
+
+// MIDDLEWARE
 
 server.engine('hbs', hbs.engine({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
