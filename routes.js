@@ -24,8 +24,8 @@ router.get('/plants/:id', (req, res) => {
   fs.readFile('./data.json', 'utf-8')
     .then((plants) => {
       const parsedData = JSON.parse(plants)
-      const singlePlant = parsedData.plants.find((plant) => plant.id === plant)
-      console.log(plants.id)
+      const singlePlant = parsedData.plants.find((x => x.id === plant))
+      console.log(plant)
       return res.render('plants', singlePlant)
     })
     .catch((err) => {
