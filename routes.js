@@ -15,9 +15,6 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/plants/', (req, res) => {
-  res.render('plants')
-})
 
 router.get('/plants/:id', (req, res) => {
   const plant = Number(req.params.id)
@@ -33,59 +30,30 @@ router.get('/plants/:id', (req, res) => {
     })
 })
 
-router.get('/plants/comments/:id', (req, res) => {
+router.get('/comments/', (req, res) => {
   const plant = Number(req.params.id)
-  console.log(plant)
   fs.readFile('./data.json', 'utf-8')
     .then((plants) => {
       const parsedData = JSON.parse(plants)
       const singlePlant = parsedData.plants.find((x) => x.id === plant)
-      console.log(plant)
-      return res.render('plants', singlePlant)
+      return res.render('comments', singlePlant)
     })
     .catch((err) => {
       return res.status(400).send(err.message)
     })
 })
 
-// router.get('/plants/comments', (req, res) => {
-//   const plant = Number(req.params.id)
-//   fs.readFile('./comments.json', 'utf-8')
-//     .then((plants) => {
-//       const parsedData = JSON.parse(plants)
-//       const singlePlant = parsedData.plants.find((x) => x.id === plant)
-//       console.log(plant)
-//       return res.render('plants', singlePlant)
-//     })
-//     .catch((err) => {
-//       return res.status(400).send(err.message)
-//     })
-// })
+// router.post('/comments/', (req, res) => {
+// fs.writeFile('./comments.json', JSON.stringify(animals, null, 4))
+   
 
-// update this for comments page
-// router.post('/:id/comment', (req, res) => {
-//   const id = Number(req.params.id)
-//   const comments = req.body.comments
+//     .then(() => { return res.redirect('/puppies/' + id) })
 
-//   fs.readFile('./data.json', 'utf-8')
-//     .then((plants) => {
-//       const plantsCopy = JSON.parse(plants)
 
-//       const specificPlant = plantsCopy.plants.find((plants) => {
-//         return plants.id === id
-//       })
-//       specificPlants.comments = newComments
-//       return newComments
-//     })
-//     .then((comments) => {
-//       return fs.writeFile('./comments.json', JSON.stringify(plants, null, 4))
-//     })
-//     .then(() => {
-//       return res.redirect('/plants/' + id)
-//     })
-//     .catch((err) => {
+//     .catch(err => {
 //       return res.status(500).send(err.message)
 //     })
 // })
+
 
 module.exports = router
