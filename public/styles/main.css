@@ -1,18 +1,36 @@
 body {
   font-family: 'Poppins';
+  color: #284B63;
   background-color: #E5FCF5;
   margin: auto;
   width: 50%;
+  
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 65px;
+  color: #153243;
+}
+
+h2 {
+  font-size: 35px;
 }
 
 nav a {
+font-family: 'Playfair Display', serif;
  text-decoration: none;
  margin: none;
- font-size: 25px;
- padding-inline: 20px;
- padding-top: 2cm;
+ font-size: 32px;
  display: block;
+ text-align: center;
 }
+
+nav a:hover {
+  text-decoration: underline;
+  color: #FF6663;
+}
+
 
 a {
   color: #153243;
@@ -22,14 +40,18 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  text-align: center;
 }
 
 li {
   float: left;
+  text-align: center;
+
 }
 
 li a {
   display: block;
+  text-align: center;
 }
 
 img {
