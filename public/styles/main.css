@@ -18,12 +18,13 @@ h2 {
 }
 
 nav a {
-font-family: 'Playfair Display', serif;
- text-decoration: none;
- margin: none;
- font-size: 32px;
- display: block;
- text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  text-decoration: none;
+  margin: none;
+  font-size: 40px;
+  display: block;
+  text-align: center;
 }
 
 nav a:hover {
@@ -46,12 +47,12 @@ ul {
 li {
   float: left;
   text-align: center;
-
+  width: 5%%;
+  margin-top: 20px;
 }
 
 li a {
   display: block;
-  text-align: center;
 }
 
 img {
