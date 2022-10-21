@@ -1,18 +1,22 @@
-/* @import url(https://fonts.google.com/specimen/Poppins); */
-
-
-
 body {
   font-family: 'Poppins';
-  background-color: aquamarine;
+  background-color: #E5FCF5;
+  margin: auto;
+  width: 50%;
 }
 
-
-nav{
-  justify-content: center;
+nav a {
+ text-decoration: none;
+ margin: none;
+ font-size: 25px;
+ padding-inline: 20px;
+ padding-top: 2cm;
+ display: block;
 }
 
-
+a {
+  color: #153243;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -26,14 +30,10 @@ li {
 
 li a {
   display: block;
-  padding: 12px;
-  background-color: black;
-}
-
-a{
-  color: white;
 }
 
 img {
   max-width: 500px;
+  max-height: 500px;
+  border-radius: 25px;
 }
