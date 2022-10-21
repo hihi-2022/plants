@@ -1,40 +1,43 @@
+<header>
+  {{>nav}}
+</header>
 <div id="plant-page">
   <h2>Plant details</h2>
   <img class="plant-img" src={{image}}>
   <h3>{{ common_name }}</h3>
   <div>
     <p>
-      Scientific name: {{ scientific_name }}
+      <strong>Scientific name:</strong> {{ scientific_name }}
     </p>
   </div>
   <div>
     <p>
-      Skill level: {{ skill_level }}
+      <strong>Skill level:</strong> {{ skill_level }}
     </p>
   </div>
   <div>
     <p>
-      Water: {{ water }}
+    <strong>Water:</strong> {{ water }}
     </p>
   </div>
   <div>
     <p>
-      Sunlight: {{sunlight}}
+    <strong>Sunlight:</strong> {{sunlight}}
     </p>
   </div>
   <div>
     <p>
-      Temperature and humidity: {{ temperature_humidity }}
+    <strong>Temperature and humidity:</strong> {{ temperature_humidity }}
     </p>
   </div>
   <div>
     <p>
-      Cost: {{ cost }}
+    <strong>Cost:</strong> {{ cost }}
     </p>
   </div>
   <div>
     <p>
-      Care instructions: {{ care_instructions }}
+    <strong>Care instructions:</strong> {{ care_instructions }}
     </p>
   </div>
 </div>
