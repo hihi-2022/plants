@@ -1,40 +1,40 @@
 <div id="plant-details">
   <h2>Plant details</h2>
-  <img class="plant-img" src="" alt="">
-  <h3>{{}}</h3>
+  <img class="plant-img" src="{{ image }}">
+  <h3>{{ common_name }}</h3>
   <div>
     <p>
-      Scientific name:
+      Scientific name: {{ scientific_name }}
     </p>
   </div>
   <div>
     <p>
-      Skill level:
+      Skill level: {{ skill_level }}
     </p>
   </div>
   <div>
     <p>
-      Water:
+      Water: {{ water }}
     </p>
   </div>
   <div>
     <p>
-      Sunlight:
+      Sunlight: {{sunlight}}
     </p>
   </div>
   <div>
     <p>
-      Temperature & humidity:
+      Temperature and humidity: {{ temperature_humidity }}
     </p>
   </div>
   <div>
     <p>
-      Cost:
+      Cost: {{ cost }}
     </p>
   </div>
   <div>
     <p>
-      Care instructions:
+      Care instructions: {{ care_instructions }}
     </p>
   </div>
 </div>
