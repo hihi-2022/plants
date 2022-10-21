@@ -24,7 +24,22 @@ router.get('/plants/:id', (req, res) => {
   fs.readFile('./data.json', 'utf-8')
     .then((plants) => {
       const parsedData = JSON.parse(plants)
-      const singlePlant = parsedData.plants.find((x => x.id === plant))
+      const singlePlant = parsedData.plants.find((x) => x.id === plant)
+      // console.log(plant)
+      return res.render('plants', singlePlant)
+    })
+    .catch((err) => {
+      return res.status(400).send(err.message)
+    })
+})
+
+router.get('/plants/comments/:id', (req, res) => {
+  const plant = Number(req.params.id)
+  console.log(plant)
+  fs.readFile('./data.json', 'utf-8')
+    .then((plants) => {
+      const parsedData = JSON.parse(plants)
+      const singlePlant = parsedData.plants.find((x) => x.id === plant)
       console.log(plant)
       return res.render('plants', singlePlant)
     })
@@ -32,6 +47,20 @@ router.get('/plants/:id', (req, res) => {
       return res.status(400).send(err.message)
     })
 })
+
+// router.get('/plants/comments', (req, res) => {
+//   const plant = Number(req.params.id)
+//   fs.readFile('./comments.json', 'utf-8')
+//     .then((plants) => {
+//       const parsedData = JSON.parse(plants)
+//       const singlePlant = parsedData.plants.find((x) => x.id === plant)
+//       console.log(plant)
+//       return res.render('plants', singlePlant)
+//     })
+//     .catch((err) => {
+//       return res.status(400).send(err.message)
+//     })
+// })
 
 // update this for comments page
 // router.post('/:id/comment', (req, res) => {
